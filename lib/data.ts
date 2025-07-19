@@ -1,0 +1,133 @@
+export interface Producto {
+  id: string
+  nombre: string
+  precio: number
+  imagen: string
+  categoria: string
+  unidad: string
+  supermercado: string
+  supermercadoUrl: string
+}
+
+export const productos: Producto[] = [
+  {
+    id: "1",
+    nombre: "Fideos Spaguetti Molitalia 450g",
+    precio: 3.60,
+    imagen: "https://media.falabella.com/tottusPE/42907443_1/w=800,h=800,fit=pad",
+    categoria: "Pastas",
+    unidad: "450g",
+    supermercado: "Tottus",
+    supermercadoUrl: "https://www.tottus.com.pe",
+  },
+  {
+    id: "2",
+    nombre: "Leche Gloria Sixpack Lata 390g c/u",
+    precio: 21.90,
+    imagen: "https://metroio.vtexassets.com/arquivos/ids/596133-800-auto?v=638880609454970000&width=800&height=auto&aspect=true",
+    categoria: "Lácteos",
+    unidad: "6 unid",
+    supermercado: "Metro",
+    supermercadoUrl: "https://www.metro.pe",
+  },
+  {
+    id: "3",
+    nombre: "Avena Quaker Tradicional 900g",
+    precio: 10.90,
+    imagen: "https://wongfood.vtexassets.com/arquivos/ids/739447-800-auto?v=638687577769200000&width=800&height=auto&aspect=true",
+    categoria: "Cereales",
+    unidad: "900g",
+    supermercado: "Wong",
+    supermercadoUrl: "https://www.wong.pe",
+  },
+  {
+    id: "4",
+    nombre: "Azúcar Rubia BELL'S Bolsa 5Kg",
+    precio: 20.30,
+    imagen: "https://vivanda.vtexassets.com/arquivos/ids/300791-800-550?v=637737941059370000&width=800&height=550&aspect=true",
+    categoria: "Endulzantes",
+    unidad: "5Kg",
+    supermercado: "Vivanda",
+    supermercadoUrl: "https://www.vivanda.com.pe",
+  },
+  {
+    id: "5",
+    nombre: "Papel Higiénico Suave Empaque 4 Rollos",
+    precio: 7.90,
+    imagen: "https://metroio.vtexassets.com/arquivos/ids/522482-800-auto?v=638495769715130000&width=800&height=auto&aspect=true",
+    categoria: "Higiene Personal",
+    unidad: "4 unid",
+    supermercado: "Metro",
+    supermercadoUrl: "https://www.metro.pe",
+  },
+  {
+    id: "6",
+    nombre: "Arroz Superior Costeño Bolsa 5Kg",
+    precio: 21.90,
+    imagen: "https://plazavea.vteximg.com.br/arquivos/ids/27552440-1000-1000/931739.jpg",
+    categoria: "Granos",
+    unidad: "5Kg",
+    supermercado: "Plaza Vea",
+    supermercadoUrl: "https://www.plazavea.com.pe",
+  },
+  {
+    id: "7",
+    nombre: "Huevos Pardos La Calera x30",
+    precio: 21.50,
+    imagen: "https://metroio.vtexassets.com/arquivos/ids/292318-800-auto?v=638179318428870000&width=800&height=auto&aspect=true",
+    categoria: "Proteínas",
+    unidad: "30 unid",
+    supermercado: "Metro",
+    supermercadoUrl: "https://www.metro.pe",
+  },
+  {
+    id: "8",
+    nombre: "Agua Cielo sin Gas Botella 2.5L",
+    precio: 2.5,
+    imagen: "https://plazavea.vteximg.com.br/arquivos/ids/29322561-1000-1000/1046239002.jpg",
+    categoria: "Bebidas",
+    unidad: "2.5L",
+    supermercado: "Plaza Vea",
+    supermercadoUrl: "https://www.plazavea.com.pe",
+  },
+  {
+    id: "9",
+    nombre: "Pollo Fresco con Menudencia San Fernando x Kg",
+    precio: 8.40,
+    imagen: "https://wongfood.vtexassets.com/arquivos/ids/711762-800-auto?v=638539510164570000&width=800&height=auto&aspect=true",
+    categoria: "Carnes",
+    unidad: "por Kg",
+    supermercado: "Wong",
+    supermercadoUrl: "https://www.wong.pe",
+  },
+  {
+    id: "10",
+    nombre: "Sal de Mesa Marina Emsal Bolsa 1Kg",
+    precio: 2.40,
+    imagen: "https://media.falabella.com/tottusPE/41458532_1/w=800,h=800,fit=pad",
+    categoria: "Condimentos",
+    unidad: "1Kg",
+    supermercado: "Tottus",
+    supermercadoUrl: "https://www.tottus.com.pe",
+  },
+  {
+    id: "11",
+    nombre: "Filete de Atún Florida en Aceite Vegetal x3",
+    precio: 13.00,
+    imagen: "https://vivanda.vtexassets.com/arquivos/ids/464412-800-550?v=638346131961030000&width=800&height=550&aspect=true",
+    categoria: "Conservas",
+    unidad: "3 latas",
+    supermercado: "Vivanda",
+    supermercadoUrl: "https://www.vivanda.com.pe",
+  },
+  {
+    id: "12",
+    nombre: "Aceite Vegetal Primor Botella 900ml",
+    precio: 8.90,
+    imagen: "https://media.falabella.com/tottusPE/42757359_2/w=800,h=800,fit=pad",
+    categoria: "Aceites",
+    unidad: "900ml",
+    supermercado: "Tottus",
+    supermercadoUrl: "https://www.tottus.com.pe",
+  },
+]
