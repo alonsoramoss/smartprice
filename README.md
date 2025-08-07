@@ -1,6 +1,8 @@
 # SMARTPRICE
 Compara precios de productos de primera necesidad entre distintos supermercados del Perú. Ideal para ahorrar y tomar decisiones inteligentes.
 
+![smartprice](https://github.com/user-attachments/assets/b8c21ef6-059b-43ea-bd55-3abf744e4a88)
+
 ## Tecnologías
 - ![Next.js](https://img.shields.io/badge/Next.js-black?style=for-the-badge&logo=next.js&logoColor=white)
 - ![React](https://img.shields.io/badge/react-61DAFB.svg?style=for-the-badge&logo=react&logoColor=black)
@@ -10,6 +12,9 @@ Compara precios de productos de primera necesidad entre distintos supermercados 
 ## Instalación
 #### 1. Clona el repositorio
     git clone https://github.com/alonsoramoss/smartprice.git
+
+#### 2. Entra al directorio del proyecto
+    cd smartprice
 
 #### 2. Instala dependencias
     pnpm install
