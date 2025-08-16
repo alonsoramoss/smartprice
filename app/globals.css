@@ -3,12 +3,12 @@
 @tailwind utilities;
 
 *::selection {
-  color: #000;
+  color: #000000;
   background-color: #22C55E;
 }
 
 *::-moz-selection {
-  color: #000;
+  color: #000000;
   background-color: #22C55E;
 }
 
@@ -53,5 +53,23 @@
   * {
     scrollbar-color: #111827 #ffffff;
     scrollbar-width: thin;
+  }
+  
+  input[type="password"] {
+    -webkit-appearance: none;
+    appearance: none;
+  }
+
+  input[type="password"]::-ms-reveal,
+  input[type="password"]::-ms-clear {
+    display: none;
+  }
+
+  input[type="password"]::-webkit-password-toggle,
+  input[type="password"]::-webkit-clear-button,
+  input[type="password"]::-webkit-credentials-auto-fill-button,
+  input[type="password"]::-webkit-contacts-auto-fill-button {
+    display: none;
+    appearance: none;
   }
 }
