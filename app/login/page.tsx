@@ -54,9 +54,9 @@ export default function LoginPage() {
                 <Input
                   id="email"
                   type="email"
-                  placeholder="Ingrese su correo electrónico"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
+                  placeholder="Ingrese su correo electrónico"
                   required
                   className="text-sm sm:text-base"
                 />
@@ -70,23 +70,25 @@ export default function LoginPage() {
                   <Input
                     id="password"
                     type={mostrarPassword ? "text" : "password"}
-                    placeholder="Ingrese su contraseña"
                     value={password}
                     onChange={(e) => setPassword(e.target.value)}
+                    placeholder="Ingrese su contraseña"
                     required
                     className="text-sm sm:text-base pr-10"
                   />
                   <Button
                     type="button"
+                    onClick={() => setMostrarPassword(!mostrarPassword)}
                     variant="ghost"
                     size="sm"
-                    className="absolute right-0 top-0 h-full px-3 py-2 hover:bg-transparent"
-                    onClick={() => setMostrarPassword(!mostrarPassword)}
+                    title={mostrarPassword ? "Ocultar contraseña" : "Mostrar contraseña"}
+                    aria-label={mostrarPassword ? "Ocultar contraseña" : "Mostrar contraseña"}
+                    className="absolute right-0 top-0 h-full px-3 py-2 group hover:bg-transparent"
                   >
                     {mostrarPassword ? (
-                      <EyeOff className="h-4 w-4 text-gray-400" />
+                      <EyeOff className="h-4 w-4 text-gray-400 group-hover:text-gray-600 transition-colors duration-300 ease-in-out" />
                     ) : (
-                      <Eye className="h-4 w-4 text-gray-400" />
+                      <Eye className="h-4 w-4 text-gray-400 group-hover:text-gray-600 transition-colors duration-300 ease-in-out" />
                     )}
                   </Button>
                 </div>
