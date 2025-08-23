@@ -6,6 +6,7 @@ import { useRouter } from "next/navigation"
 import { useState } from "react"
 import Link from "next/link"
 import Image from "next/image"
+import { SuscripcionButton } from "./suscripcion-button"
 import { Button } from "@/components/ui/button"
 import { ShoppingCart, User, LogOut } from "lucide-react"
 import { Badge } from "@/components/ui/badge"
@@ -35,12 +36,13 @@ export function Header() {
         <div className="flex items-center justify-between">
           <Link href="/" className="flex items-center space-x-1" aria-label="Ir a la página principal">
             <div className="relative w-9 h-9 sm:w-10 sm:h-10">
-              <Image src="/logo.png" alt="Logo de SMARTPRICE" fill className="object-contain pointer-events-none" />
+              <Image src="/logo.png" alt="Logo de SMARTPRICE" fill className="object-contain" />
             </div>
             <span className="text-lg sm:text-xl font-bold text-gray-900">SMARTPRICE</span>
           </Link>
 
-          <div className="flex items-center space-x-2 sm:space-x-4">
+          <div className="flex items-center space-x-2 sm:space-x-3">
+            <SuscripcionButton variant="header" />
             <Link href="/cart" aria-label="Ir al carrito">
               <Button variant="outline" size="sm" className="relative bg-transparent h-9 px-3 sm:h-10 sm:px-4" aria-label="Ir al carrito">
                 <ShoppingCart className="h-4 w-4 sm:mr-1" />
