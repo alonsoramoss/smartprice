@@ -4,6 +4,7 @@ import { AuthProvider } from "@/contexts/auth-context"
 import { CartProvider } from "@/contexts/cart-context"
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
+import { ButtonFlotanteCalificacion } from "@/components/button-flotante-calificacion"
 import { Toaster } from "@/components/ui/toaster"
 import "./globals.css"
 
@@ -70,6 +71,7 @@ export default function RootLayout({
               <main className="flex-1 bg-gray-50">{children}</main>
               <Footer />
             </div>
+            <ButtonFlotanteCalificacion />
             <Toaster />
           </CartProvider>
         </AuthProvider>
