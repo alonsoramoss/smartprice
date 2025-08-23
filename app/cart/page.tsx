@@ -2,16 +2,16 @@
 
 import { useCart } from "@/contexts/cart-context"
 import { useAuth } from "@/contexts/auth-context"
+import { useRouter } from "next/navigation"
+import { useToast } from "@/hooks/use-toast"
+import { useState } from "react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
+import Image from "next/image"
+import { Minus, Plus, ShoppingBag, Trash2, Lock } from "lucide-react"
 import { Separator } from "@/components/ui/separator"
 import { Alert, AlertDescription } from "@/components/ui/alert"
-import { Minus, Plus, ShoppingBag, Trash2, Lock } from "lucide-react"
-import Image from "next/image"
-import { useRouter } from "next/navigation"
-import { ConfirmationDialog } from "@/components/ui/confirmation-dialog"
-import { useState } from "react"
-import { useToast } from "@/hooks/use-toast"
+import { DeliveryConfirmationDialog } from "@/components/delivery-confirmation-dialog"
 
 export default function CartPage() {
   const { items, updateCantidad, eliminarDelCarrito, vaciarCarrito, getTotal } = useCart()
@@ -29,16 +29,20 @@ export default function CartPage() {
     setMostrarDialogCompra(true)
   }
 
-  const confirmarCompra = () => {
+  const confirmarCompra = (incluyeDelivery: boolean) => {
     const cantidadItem = items.length
-    const total = getTotal()
+    const subtotal = getTotal()
+    const costoDelivery = incluyeDelivery ? 5.0 : 0
+    const total = subtotal + costoDelivery
 
     vaciarCarrito()
+
+    const mensajeDelivery = incluyeDelivery ? " (incluye delivery S/ 5.00)" : " (recojo en tienda)"
 
     toast({
       variant: "success",
       title: "¡Compra exitosa!",
-      description: `Has comprado ${cantidadItem} producto${cantidadItem > 1 ? "s" : ""} por un total de S/ ${total.toFixed(2)}. ¡Gracias por tu compra!`,
+      description: `Has comprado ${cantidadItem} producto${cantidadItem > 1 ? "s" : ""} por un total de S/ ${total.toFixed(2)}${mensajeDelivery}. ¡Gracias por tu compra!`,
       duration: 6000,
     })
 
@@ -73,7 +77,7 @@ export default function CartPage() {
                       src={item.imagen || "/placeholder.svg"}
                       alt={item.nombre}
                       fill
-                      className="object-cover rounded-md pointer-events-none"
+                      className="object-cover rounded-md"
                     />
                   </div>
 
@@ -144,8 +148,12 @@ export default function CartPage() {
               <Separator />
 
               <div className="flex justify-between font-semibold text-base sm:text-lg">
-                <span>Total</span>
+                <span>Subtotal</span>
                 <span className="text-green-600">S/ {getTotal().toFixed(2)}</span>
+              </div>
+
+              <div className="text-xs text-gray-500">
+                * El costo de delivery (S/ 5.00) se calculará en el siguiente paso
               </div>
 
               {!estaAutenticado && (
@@ -178,13 +186,11 @@ export default function CartPage() {
         </div>
       </div>
 
-      <ConfirmationDialog
+      <DeliveryConfirmationDialog
         open={mostrarDialogCompra}
         onOpenChange={setMostrarDialogCompra}
-        title="Confirmar compra"
-        description={`¿Estás seguro de que deseas comprar ${items.length} producto${items.length > 1 ? "s" : ""} por un total de S/ ${getTotal().toFixed(2)}?`}
-        confirmText="Confirmar compra"
-        cancelText="Cancelar"
+        cantidadItem={items.length}
+        subtotal={getTotal()}
         onConfirm={confirmarCompra}
       />
     </div>
