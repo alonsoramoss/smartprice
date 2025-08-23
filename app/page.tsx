@@ -4,6 +4,7 @@ import { useState, useMemo } from "react"
 import { productos } from "@/lib/data"
 import { BarraBusqueda } from "@/components/barra-busqueda"
 import { ResultadoBusqueda } from "@/components/resultado-busqueda"
+import { Reseña } from "@/components/reseña"
 
 export default function HomePage() {
   const [consultaIngresada, setConsultaIngresada] = useState("")
@@ -34,6 +35,10 @@ export default function HomePage() {
 
       <div className="my-6">
         <BarraBusqueda enBusqueda={manejarBusqueda} placeholder="Buscar por nombre, categoría o supermercado..." />
+      </div>
+
+      <div className="my-6">
+        <Reseña />
       </div>
 
       <ResultadoBusqueda productos={productosFiltrados} consulta={consultaIngresada} totalProductos={productos.length} />
