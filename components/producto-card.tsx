@@ -1,13 +1,13 @@
 "use client"
 
-import { useState } from "react"
-import Image from "next/image"
-import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardFooter } from "@/components/ui/card"
-import { Badge } from "@/components/ui/badge"
-import { ExternalLink, ShoppingCart, Check } from "lucide-react"
-import { useCart } from "@/contexts/cart-context"
 import type { Producto } from "@/lib/data"
+import { useCart } from "@/contexts/cart-context"
+import { useState } from "react"
+import { Card, CardContent, CardFooter } from "@/components/ui/card"
+import Image from "next/image"
+import { Badge } from "@/components/ui/badge"
+import { Button } from "@/components/ui/button"
+import { ExternalLink, ShoppingCart, Check } from "lucide-react"
 
 interface ProductoCardProps {
   producto: Producto
@@ -35,7 +35,7 @@ export function ProductoCard({ producto }: ProductoCardProps) {
             src={producto.imagen || "/placeholder.svg"}
             alt={producto.nombre}
             fill
-            className="object-cover group-hover:scale-105 transition-transform duration-200 pointer-events-none"
+            className="object-cover group-hover:scale-105 transition-transform duration-200"
           />
           <Badge variant="secondary" className="absolute top-2 right-2 bg-gray-200/80 text-gray-700 text-xs">
             {producto.categoria}
