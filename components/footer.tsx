@@ -1,8 +1,8 @@
 "use client"
 
-import { Separator } from "@/components/ui/separator"
-import { Home, ShoppingCart, User } from "lucide-react"
 import Link from "next/link"
+import { Home, ShoppingCart, User } from "lucide-react"
+import { Separator } from "@/components/ui/separator"
 
 export function Footer() {
     const currentYear = new Date().getFullYear()
@@ -16,7 +16,7 @@ export function Footer() {
                             <span className="text-2xl font-bold text-white">SMARTPRICE</span>
                         </div>
                         <p className="text-sm leading-relaxed text-gray-400">
-                            Compara precios de productos de primera necesidad entre distintos supermercados del Perú. Ideal para ahorrar y tomar decisiones inteligentes.
+                            Experiencia única para descubrir nuevas marcas y productos que se adapten a tus intereses y necesidades.
                         </p>
                     </div>
 
