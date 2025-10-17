@@ -44,6 +44,7 @@ export const metadata: Metadata = {
         url: "https://smartprice-app.vercel.app/og.jpg",
         width: 1200,
         height: 630,
+        alt: "SMARTPRICE",
       },
     ],
     type: "website",
@@ -53,6 +54,9 @@ export const metadata: Metadata = {
     title: "SMARTPRICE",
     description: "Compara precios de productos de primera necesidad entre distintos supermercados del Perú. Ideal para ahorrar y tomar decisiones inteligentes.",
     images: ["https://smartprice-app.vercel.app/og.jpg"],
+  },
+  alternates: {
+    canonical: "https://smartprice-app.vercel.app",
   },
 };
 
