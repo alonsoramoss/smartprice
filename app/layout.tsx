@@ -6,6 +6,7 @@ import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 import { ButtonFlotanteCalificacion } from "@/components/button-flotante-calificacion"
 import { Toaster } from "@/components/ui/toaster"
+import { Analytics } from "@vercel/analytics/next"
 import "./globals.css"
 
 const poppins = Poppins({ subsets: ["latin"], weight: ["400", "500", "600", "700"], display: "swap", });
@@ -72,7 +73,10 @@ export default function RootLayout({
           <CartProvider>
             <div className="flex flex-col min-h-screen">
               <Header />
-              <main className="flex-1 bg-gray-50">{children}</main>
+              <main className="flex-1 bg-gray-50">
+                {children}
+                <Analytics />
+              </main>
               <Footer />
             </div>
             <ButtonFlotanteCalificacion />
