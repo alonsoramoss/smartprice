@@ -36,9 +36,9 @@ export function Header() {
         <div className="flex items-center justify-between">
           <Link href="/" className="flex items-center space-x-1" aria-label="Ir a la página principal">
             <div className="relative w-9 h-9 sm:w-10 sm:h-10">
-              <Image src="/logo.png" alt="Logo de SMARTPRICE" fill className="object-contain" />
+              <Image src="/logo.png" alt="Logo de SmartPrice" fill className="object-contain" />
             </div>
-            <span className="text-lg sm:text-xl font-bold text-gray-900">SMARTPRICE</span>
+            <span className="text-lg sm:text-xl font-bold text-gray-900">SmartPrice</span>
           </Link>
 
           <div className="flex items-center space-x-2 sm:space-x-3">

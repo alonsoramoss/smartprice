@@ -13,7 +13,7 @@ export function Footer() {
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-8">
                     <div>
                         <div className="flex items-center mb-4">
-                            <span className="text-2xl font-bold text-white">SMARTPRICE</span>
+                            <span className="text-2xl font-bold text-white">SmartPrice</span>
                         </div>
                         <p className="text-sm leading-relaxed text-gray-400">
                             Experiencia única para descubrir nuevas marcas y productos que se adapten a tus intereses y necesidades.
@@ -50,7 +50,7 @@ export function Footer() {
 
             <div className="container mx-auto p-4">
                 <div className="flex justify-center items-center">
-                    <p className="text-sm text-gray-400">© {currentYear} SMARTPRICE</p>
+                    <p className="text-sm text-gray-400">© {currentYear} SmartPrice</p>
                 </div>
             </div>
         </footer>

@@ -1,4 +1,4 @@
-# SMARTPRICE
+# SmartPrice
 
 E-commerce que permite comparar precios de productos de primera necesidad entre distintos supermercados del Perú. Ideal para ahorrar y tomar decisiones inteligentes.
 

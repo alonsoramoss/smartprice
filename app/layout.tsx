@@ -12,7 +12,7 @@ import "./globals.css"
 const poppins = Poppins({ subsets: ["latin"], weight: ["400", "500", "600", "700"], display: "swap", });
 
 export const metadata: Metadata = {
-  title: "SMARTPRICE",
+  title: "SmartPrice",
   description: "Compara precios de productos de primera necesidad entre distintos supermercados del Perú. Ideal para ahorrar y tomar decisiones inteligentes.",
   authors: [{ name: "Alonso Ramos", url: "https://alonsoramos.netlify.app" }],
   creator: "Alonso Ramos",
@@ -38,23 +38,23 @@ export const metadata: Metadata = {
     follow: true,
   },
   openGraph: {
-    title: "SMARTPRICE",
+    title: "SmartPrice",
     description: "Compara precios de productos de primera necesidad entre distintos supermercados del Perú. Ideal para ahorrar y tomar decisiones inteligentes.",
     url: "https://smartprice-app.vercel.app",
-    siteName: "SMARTPRICE",
+    siteName: "SmartPrice",
     images: [
       {
         url: "https://smartprice-app.vercel.app/og.jpg",
         width: 1200,
         height: 630,
-        alt: "SMARTPRICE",
+        alt: "SmartPrice",
       },
     ],
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "SMARTPRICE",
+    title: "SmartPrice",
     description: "Compara precios de productos de primera necesidad entre distintos supermercados del Perú. Ideal para ahorrar y tomar decisiones inteligentes.",
     images: ["https://smartprice-app.vercel.app/og.jpg"],
   },

@@ -5,17 +5,17 @@ import { Button } from "@/components/ui/button"
 import { Home } from "lucide-react"
 
 export const metadata: Metadata = {
-    title: "Página no encontrada - SMARTPRICE",
+    title: "Página no encontrada - SmartPrice",
     description: "La página que buscas no existe. Vuelve al inicio para seguir comparando precios y tomando decisiones inteligentes de compra.",
     robots: {
         index: false,
         follow: false,
     },
     openGraph: {
-        title: "Página no encontrada - SMARTPRICE",
+        title: "Página no encontrada - SmartPrice",
         description: "La página que buscas no existe. Vuelve al inicio para seguir comparando precios y tomando decisiones inteligentes de compra.",
         url: "https://smartprice-app.vercel.app",
-        siteName: "SMARTPRICE",
+        siteName: "SmartPrice",
         images: [
             {
                 url: "https://smartprice-app.vercel.app/og.jpg",
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     },
     twitter: {
         card: "summary_large_image",
-        title: "Página no encontrada - SMARTPRICE",
+        title: "Página no encontrada - SmartPrice",
         description: "La página que buscas no existe. Vuelve al inicio para seguir comparando precios y tomando decisiones inteligentes de compra.",
         images: ["https://smartprice-app.vercel.app/og.jpg"],
     },
