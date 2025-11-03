@@ -13,6 +13,8 @@ const poppins = Poppins({ subsets: ["latin"], weight: ["400", "500", "600", "700
 export const metadata: Metadata = {
   title: "SMARTPRICE",
   description: "Compara precios de productos de primera necesidad entre distintos supermercados del Perú. Ideal para ahorrar y tomar decisiones inteligentes.",
+  authors: [{ name: "Alonso Ramos", url: "https://alonsoramos.netlify.app" }],
+  creator: "Alonso Ramos",
   icons:{
     icon: [
       { url: "/favicon.ico" },
@@ -72,7 +74,9 @@ export default function RootLayout({
           <CartProvider>
             <div className="flex flex-col min-h-screen">
               <Header />
-              <main className="flex-1 bg-gray-50">{children}</main>
+              <main className="flex-1 bg-gray-50">
+                {children}
+              </main>
               <Footer />
             </div>
             <ButtonFlotanteCalificacion />
