@@ -42,7 +42,7 @@ export function Header() {
           </Link>
 
           <div className="flex items-center space-x-2 sm:space-x-3">
-            <SuscripcionButton variant="header" />
+            <SuscripcionButton />
             <Link href="/cart" aria-label="Ir al carrito">
               <Button
                 type="button"
