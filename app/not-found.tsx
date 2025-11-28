@@ -6,14 +6,14 @@ import { Home } from "lucide-react"
 
 export const metadata: Metadata = {
     title: "Página no encontrada - SmartPrice",
-    description: "La página que buscas no existe. Vuelve al inicio para seguir comparando precios y tomando decisiones inteligentes de compra.",
+    description: "La página que buscas no existe. Vuelve al inicio para seguir descubriendo nuevas marcas y productos que se adapten a tus intereses y necesidades.",
     robots: {
         index: false,
         follow: false,
     },
     openGraph: {
         title: "Página no encontrada - SmartPrice",
-        description: "La página que buscas no existe. Vuelve al inicio para seguir comparando precios y tomando decisiones inteligentes de compra.",
+        description: "La página que buscas no existe. Vuelve al inicio para seguir descubriendo nuevas marcas y productos que se adapten a tus intereses y necesidades.",
         url: "https://smartprice-app.vercel.app",
         siteName: "SmartPrice",
         images: [
@@ -21,6 +21,7 @@ export const metadata: Metadata = {
                 url: "https://smartprice-app.vercel.app/og.jpg",
                 width: 1200,
                 height: 630,
+                alt:"SmartPrice",
             },
         ],
         type: "website",
@@ -28,7 +29,7 @@ export const metadata: Metadata = {
     twitter: {
         card: "summary_large_image",
         title: "Página no encontrada - SmartPrice",
-        description: "La página que buscas no existe. Vuelve al inicio para seguir comparando precios y tomando decisiones inteligentes de compra.",
+        description: "La página que buscas no existe. Vuelve al inicio para seguir descubriendo nuevas marcas y productos que se adapten a tus intereses y necesidades.",
         images: ["https://smartprice-app.vercel.app/og.jpg"],
     },
 }

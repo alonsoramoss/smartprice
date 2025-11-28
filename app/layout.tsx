@@ -3,17 +3,17 @@ import type { Metadata } from "next"
 import { AuthProvider } from "@/contexts/auth-context"
 import { CartProvider } from "@/contexts/cart-context"
 import { Header } from "@/components/header"
+import { Analytics } from "@vercel/analytics/next"
 import { Footer } from "@/components/footer"
 import { ButtonFlotanteCalificacion } from "@/components/button-flotante-calificacion"
 import { Toaster } from "@/components/ui/toaster"
-import { Analytics } from "@vercel/analytics/next"
 import "./globals.css"
 
-const poppins = Poppins({ subsets: ["latin"], weight: ["400", "500", "600", "700"], display: "swap", });
+const poppins = Poppins({ subsets: ["latin"], weight: ["400", "500", "600", "700"], display: "swap" });
 
 export const metadata: Metadata = {
   title: "SmartPrice",
-  description: "Compara precios de productos de primera necesidad entre distintos supermercados del Perú. Ideal para ahorrar y tomar decisiones inteligentes.",
+  description: "Experiencia única para descubrir nuevas marcas y productos que se adapten a tus intereses y necesidades.",
   authors: [{ name: "Alonso Ramos", url: "https://alonsoramos.netlify.app" }],
   creator: "Alonso Ramos",
   icons:{
@@ -39,7 +39,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: "SmartPrice",
-    description: "Compara precios de productos de primera necesidad entre distintos supermercados del Perú. Ideal para ahorrar y tomar decisiones inteligentes.",
+    description: "Experiencia única para descubrir nuevas marcas y productos que se adapten a tus intereses y necesidades.",
     url: "https://smartprice-app.vercel.app",
     siteName: "SmartPrice",
     images: [
@@ -55,7 +55,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "SmartPrice",
-    description: "Compara precios de productos de primera necesidad entre distintos supermercados del Perú. Ideal para ahorrar y tomar decisiones inteligentes.",
+    description: "Experiencia única para descubrir nuevas marcas y productos que se adapten a tus intereses y necesidades.",
     images: ["https://smartprice-app.vercel.app/og.jpg"],
   },
   alternates: {

@@ -1,7 +1,7 @@
 {
     "name": "SmartPrice",
     "short_name": "SmartPrice",
-    "description": "Compara precios de productos de primera necesidad entre distintos supermercados del Perú. Ideal para ahorrar y tomar decisiones inteligentes.",
+    "description": "Experiencia única para descubrir nuevas marcas y productos que se adapten a tus intereses y necesidades.",
     "start_url": "/",
     "display": "minimal-ui",
     "background_color": "#ffffff",
