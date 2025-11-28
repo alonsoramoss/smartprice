@@ -1,7 +1,7 @@
 "use client"
 
 import { useState } from "react"
-import { AlertDialog, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle } from "@/components/ui/alert-dialog"
+import { AlertDialog, AlertDialogContent, AlertDialogHeader, AlertDialogTitle, AlertDialogDescription, AlertDialogFooter } from "@/components/ui/alert-dialog"
 import { Separator } from "@/components/ui/separator"
 import { Checkbox } from "@/components/ui/checkbox"
 import { Truck } from "lucide-react"
@@ -83,10 +83,10 @@ export function DeliveryConfirmationDialog({ open, onOpenChange, cantidadItem, s
           </AlertDialogDescription>
         </AlertDialogHeader>
         <AlertDialogFooter className="flex-col sm:flex-row space-y-2 sm:space-y-0 sm:space-x-2">
-          <Button variant="outline" onClick={handleCancel} className="w-full sm:w-auto bg-transparent">
+          <Button type="button" variant="outline" onClick={handleCancel} className="w-full sm:w-auto bg-transparent">
             Cancelar
           </Button>
-          <Button onClick={handleConfirm} className="w-full sm:w-auto bg-green-600 hover:bg-green-700">
+          <Button type="button" onClick={handleConfirm} className="w-full sm:w-auto bg-green-600 hover:bg-green-700">
             Confirmar compra S/ {total.toFixed(2)}
           </Button>
         </AlertDialogFooter>

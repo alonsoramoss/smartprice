@@ -57,6 +57,7 @@ export function ProductoCard({ producto }: ProductoCardProps) {
       <CardFooter className="p-3 pt-0 flex-col space-y-1.5 mt-auto">
         <div className="flex flex-col space-y-1.5 w-full">
           <Button
+            type="button"
             variant="outline"
             size="sm"
             onClick={manejarClicSupermercado}
@@ -67,6 +68,7 @@ export function ProductoCard({ producto }: ProductoCardProps) {
           </Button>
 
           <Button
+            type="button"
             size="sm"
             onClick={manejarAddAlCarrito}
             disabled={estaAgregado}

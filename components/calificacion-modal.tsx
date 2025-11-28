@@ -54,6 +54,7 @@ export function CalificacionModal({ open, onOpenChange }: CalificacionModalProps
             {[1, 2, 3, 4, 5].map((estrella) => (
             <button
                 key={estrella}
+                type="button"
                 onClick={() => onCalificacionChange(estrella)}
                 className="focus:outline-none transition-colors"
             >
@@ -115,10 +116,10 @@ export function CalificacionModal({ open, onOpenChange }: CalificacionModalProps
                 </div>
 
                 <DialogFooter className="flex-col sm:flex-row space-y-2 sm:space-y-0 sm:space-x-2">
-                    <Button variant="outline" onClick={() => onOpenChange(false)} className="w-full sm:w-auto">
+                    <Button type="button" variant="outline" onClick={() => onOpenChange(false)} className="w-full sm:w-auto">
                         Cancelar
                     </Button>
-                    <Button onClick={handleSubmit} className="w-full sm:w-auto bg-yellow-600 hover:bg-yellow-700">
+                    <Button type="button" onClick={handleSubmit} className="w-full sm:w-auto bg-yellow-600 hover:bg-yellow-700">
                         Enviar calificación
                     </Button>
                 </DialogFooter>

@@ -56,7 +56,7 @@ export default function CartPage() {
           <ShoppingBag className="mx-auto h-12 w-12 sm:h-16 sm:w-16 text-gray-400 mb-4" />
           <h2 className="text-xl sm:text-2xl font-semibold text-gray-900 mb-2">Tu carrito está vacío</h2>
           <p className="text-sm sm:text-base text-gray-600 mb-6 px-4">Agrega algunos productos para comenzar</p>
-          <Button onClick={() => router.push("/")}>Continuar comprando</Button>
+          <Button type="button" onClick={() => router.push("/")}>Continuar comprando</Button>
         </div>
       </div>
     )
@@ -90,6 +90,7 @@ export default function CartPage() {
                   <div className="flex items-center justify-center sm:justify-end space-x-2 flex-wrap">
                     <div className="flex items-center space-x-2">
                       <Button
+                        type="button"
                         variant="outline"
                         size="icon"
                         onClick={() => updateCantidad(item.id, item.cantidad - 1)}
@@ -104,6 +105,7 @@ export default function CartPage() {
                       </span>
 
                       <Button
+                        type="button"
                         variant="outline"
                         size="icon"
                         onClick={() => updateCantidad(item.id, item.cantidad + 1)}
@@ -114,6 +116,7 @@ export default function CartPage() {
                     </div>
 
                     <Button
+                      type="button"
                       variant="outline"
                       size="icon"
                       onClick={() => eliminarDelCarrito(item.id)}
@@ -168,6 +171,7 @@ export default function CartPage() {
               )}
 
               <Button
+                type="button"
                 size="lg"
                 onClick={manejarCompra}
                 className="w-full text-sm sm:text-base" 
@@ -183,6 +187,7 @@ export default function CartPage() {
               </Button>
 
               <Button
+                type="button"
                 variant="outline"
                 onClick={() => router.push("/")}
                 className="w-full text-sm sm:text-base"

@@ -16,6 +16,7 @@ export function ButtonFlotanteCalificacion() {
                 </div>
 
                 <Button
+                    type="button"
                     size="icon"
                     onClick={() => setMostarCalificacionModal(true)}
                     className="h-14 w-14 rounded-full shadow-lg bg-gradient-to-r from-yellow-500 to-orange-500 flex-shrink-0"

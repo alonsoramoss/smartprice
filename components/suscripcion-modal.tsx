@@ -1,7 +1,7 @@
 "use client"
 
 import { useToast } from "@/hooks/use-toast"
-import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle } from "@/components/ui/dialog"
+import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription, DialogFooter } from "@/components/ui/dialog"
 import { Crown, Check } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
@@ -61,10 +61,10 @@ export function SuscripcionModal({ open, onOpenChange }: SuscripcionModalProps) 
         </div>
 
         <DialogFooter className="flex-col space-y-2 sm:flex-row sm:space-y-0">
-          <Button variant="outline" onClick={() => onOpenChange(false)} className="w-full sm:w-auto">
+          <Button type="button" variant="outline" onClick={() => onOpenChange(false)} className="w-full sm:w-auto">
             Tal vez después
           </Button>
-          <Button onClick={handleSuscripcion} className="w-full sm:w-auto bg-green-600 hover:bg-green-700">
+          <Button type="button" onClick={handleSuscripcion} className="w-full sm:w-auto bg-green-600 hover:bg-green-700">
             Suscribirse ahora
           </Button>
         </DialogFooter>

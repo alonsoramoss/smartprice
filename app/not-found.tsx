@@ -54,6 +54,7 @@ export default function NotFound() {
                         <div className="flex justify-center items-center">
                             <Link href="/">
                                 <Button
+                                    type="button"
                                     size="lg"
                                     className="w-full sm:w-auto bg-green-500 hover:bg-green-600"
                                 >

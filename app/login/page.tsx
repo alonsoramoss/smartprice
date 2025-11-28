@@ -77,6 +77,7 @@ export default function LoginPage() {
                     className="text-sm sm:text-base pr-10"
                   />
                   <Button
+                    type="button"
                     variant="ghost"
                     size="sm"
                     onClick={() => setMostrarPassword(!mostrarPassword)}

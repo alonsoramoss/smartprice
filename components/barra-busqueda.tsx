@@ -36,6 +36,7 @@ interface BarraBusquedaProps {
                 />
                 {consulta && (
                     <Button
+                        type="button"
                         variant="ghost"
                         size="sm"
                         onClick={limpiarBusqueda}

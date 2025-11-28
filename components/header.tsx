@@ -45,6 +45,7 @@ export function Header() {
             <SuscripcionButton variant="header" />
             <Link href="/cart" aria-label="Ir al carrito">
               <Button
+                type="button"
                 variant="outline"
                 size="sm"
                 aria-label="Ir al carrito"
@@ -65,6 +66,7 @@ export function Header() {
 
             {estaAutenticado ? (
               <Button
+                type="button"
                 size="sm"
                 onClick={manejarLogout}
                 aria-label="Cerrar sesión"
@@ -76,6 +78,7 @@ export function Header() {
             ) : (
               <Link href="/login" aria-label="Iniciar sesión">
                 <Button 
+                  type="button"
                   size="sm"
                   aria-label="Iniciar sesión"
                   className="h-9 px-3 sm:h-10 sm:px-4"
