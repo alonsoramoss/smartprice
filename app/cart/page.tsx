@@ -8,7 +8,7 @@ import { useState } from "react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import Image from "next/image"
-import { Minus, Plus, ShoppingBag, Trash2, Lock } from "lucide-react"
+import { ShoppingBag, Minus, Plus, Trash2, Lock } from "lucide-react"
 import { Separator } from "@/components/ui/separator"
 import { Alert, AlertDescription } from "@/components/ui/alert"
 import { DeliveryConfirmationDialog } from "@/components/delivery-confirmation-dialog"
@@ -96,7 +96,7 @@ export default function CartPage() {
                         disabled={item.cantidad <= 1}
                         className="h-8 w-8 sm:h-10 sm:w-10"
                       >
-                        <Minus className="h-3 w-3 sm:h-4 sm:w-4" />
+                        <Minus />
                       </Button>
 
                       <span className="w-8 sm:w-12 text-center font-semibold text-sm sm:text-base">
@@ -109,7 +109,7 @@ export default function CartPage() {
                         onClick={() => updateCantidad(item.id, item.cantidad + 1)}
                         className="h-8 w-8 sm:h-10 sm:w-10"
                       >
-                        <Plus className="h-3 w-3 sm:h-4 sm:w-4" />
+                        <Plus />
                       </Button>
                     </div>
 
@@ -119,7 +119,7 @@ export default function CartPage() {
                       onClick={() => eliminarDelCarrito(item.id)}
                       className="ml-2 text-red-600 hover:text-red-700 h-8 w-8 sm:h-10 sm:w-10"
                     >
-                      <Trash2 className="h-3 w-3 sm:h-4 sm:w-4" />
+                      <Trash2 />
                     </Button>
                   </div>
                 </div>
@@ -167,18 +167,26 @@ export default function CartPage() {
                 </Alert>
               )}
 
-              <Button onClick={manejarCompra} className="w-full text-sm sm:text-base" size="lg">
+              <Button
+                size="lg"
+                onClick={manejarCompra}
+                className="w-full text-sm sm:text-base" 
+              >
                 {estaAutenticado ? (
                   "Comprar"
                 ) : (
                   <>
-                    <Lock className="h-4 w-4" />
+                    <Lock />
                     Iniciar sesión para comprar
                   </>
                 )}
               </Button>
 
-              <Button variant="outline" onClick={() => router.push("/")} className="w-full text-sm sm:text-base">
+              <Button
+                variant="outline"
+                onClick={() => router.push("/")}
+                className="w-full text-sm sm:text-base"
+              >
                 Continuar comprando
               </Button>
             </CardContent>

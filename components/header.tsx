@@ -8,7 +8,7 @@ import Link from "next/link"
 import Image from "next/image"
 import { SuscripcionButton } from "./suscripcion-button"
 import { Button } from "@/components/ui/button"
-import { ShoppingCart, User, LogOut } from "lucide-react"
+import { ShoppingCart, LogOut, User } from "lucide-react"
 import { Badge } from "@/components/ui/badge"
 import { ConfirmationDialog } from "./ui/confirmation-dialog"
 
@@ -44,8 +44,13 @@ export function Header() {
           <div className="flex items-center space-x-2 sm:space-x-3">
             <SuscripcionButton variant="header" />
             <Link href="/cart" aria-label="Ir al carrito">
-              <Button variant="outline" size="sm" className="relative bg-transparent h-9 px-3 sm:h-10 sm:px-4" aria-label="Ir al carrito">
-                <ShoppingCart className="h-4 w-4 sm:mr-1" />
+              <Button
+                variant="outline"
+                size="sm"
+                aria-label="Ir al carrito"
+                className="relative bg-transparent h-9 px-3 sm:h-10 sm:px-4"
+              >
+                <ShoppingCart className="sm:mr-1" />
                 <span className="hidden sm:inline">Carrito</span>
                 {totalItems > 0 && (
                   <Badge
@@ -62,16 +67,20 @@ export function Header() {
               <Button
                 size="sm"
                 onClick={manejarLogout}
-                className="h-9 px-3 sm:h-10 sm:px-4"
                 aria-label="Cerrar sesión"
+                className="h-9 px-3 sm:h-10 sm:px-4"
               >
-                <LogOut className="h-4 w-4 sm:mr-1" />
+                <LogOut className="sm:mr-1" />
                 <span className="hidden sm:inline">Cerrar sesión</span>
               </Button>
             ) : (
               <Link href="/login" aria-label="Iniciar sesión">
-                <Button size="sm" className="h-9 px-3 sm:h-10 sm:px-4" aria-label="Iniciar sesión">
-                  <User className="h-4 w-4 sm:mr-1" />
+                <Button 
+                  size="sm"
+                  aria-label="Iniciar sesión"
+                  className="h-9 px-3 sm:h-10 sm:px-4"
+                >
+                  <User className="sm:mr-1" />
                   <span className="hidden sm:inline">Iniciar sesión</span>
                 </Button>
               </Link>

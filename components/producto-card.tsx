@@ -7,7 +7,7 @@ import { Card, CardContent, CardFooter } from "@/components/ui/card"
 import Image from "next/image"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
-import { ExternalLink, ShoppingCart, Check } from "lucide-react"
+import { ExternalLink, Check, ShoppingCart } from "lucide-react"
 
 interface ProductoCardProps {
   producto: Producto
@@ -57,24 +57,29 @@ export function ProductoCard({ producto }: ProductoCardProps) {
       <CardFooter className="p-3 pt-0 flex-col space-y-1.5 mt-auto">
         <div className="flex flex-col space-y-1.5 w-full">
           <Button
-            onClick={manejarClicSupermercado}
             variant="outline"
-            className="w-full bg-transparent text-xs h-8 px-2"
             size="sm"
+            onClick={manejarClicSupermercado}
+            className="w-full bg-transparent text-xs h-8 px-2"
           >
-            <ExternalLink className="h-3 w-3 mr-1 flex-shrink-0" />
+            <ExternalLink className="mr-1 flex-shrink-0" />
             <span className="truncate text-xs">{producto.supermercado}</span>
           </Button>
 
-          <Button onClick={manejarAddAlCarrito} className="w-full text-xs h-8 px-2" size="sm" disabled={estaAgregado}>
+          <Button
+            size="sm"
+            onClick={manejarAddAlCarrito}
+            disabled={estaAgregado}
+            className="w-full text-xs h-8 px-2"
+          >
             {estaAgregado ? (
               <>
-                <Check className="h-3 w-3 mr-1 flex-shrink-0" />
+                <Check className="mr-1 flex-shrink-0" />
                 <span className="text-xs">Agregado</span>
               </>
             ) : (
               <>
-                <ShoppingCart className="h-3 w-3 mr-1 flex-shrink-0" />
+                <ShoppingCart className="mr-1 flex-shrink-0" />
                 <span className="text-xs">Agregar</span>
               </>
             )}

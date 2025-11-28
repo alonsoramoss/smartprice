@@ -3,7 +3,7 @@
 import { useState } from "react"
 import { useToast } from "@/hooks/use-toast"
 import { Star } from "lucide-react"
-import { Dialog, DialogContent, DialogFooter, DialogHeader, DialogTitle } from "@/components/ui/dialog"
+import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogFooter } from "@/components/ui/dialog"
 import { Label } from "@/components/ui/label"
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group"
 import { Button } from "@/components/ui/button"
@@ -54,11 +54,10 @@ export function CalificacionModal({ open, onOpenChange }: CalificacionModalProps
             {[1, 2, 3, 4, 5].map((estrella) => (
             <button
                 key={estrella}
-                type="button"
                 onClick={() => onCalificacionChange(estrella)}
                 className="focus:outline-none transition-colors"
             >
-                <Star className={`h-6 w-6 ${estrella <= calificacion ? "text-yellow-400 fill-yellow-400" : "text-gray-300"} hover:text-yellow-400 hover:fill-yellow-400`} />
+                <Star className={`${estrella <= calificacion ? "text-yellow-400 fill-yellow-400" : "text-gray-300"} hover:text-yellow-400 hover:fill-yellow-400`} />
             </button>
             ))}
         </div>

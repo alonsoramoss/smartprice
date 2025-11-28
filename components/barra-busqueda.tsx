@@ -41,7 +41,7 @@ interface BarraBusquedaProps {
                         onClick={limpiarBusqueda}
                         className="absolute right-1 top-1/2 transform -translate-y-1/2 h-8 w-8 p-0 hover:bg-gray-100"
                     >
-                        <X className="h-4 w-4 text-gray-400" />
+                        <X className="text-gray-400" />
                     </Button>
                 )}
             </div>

@@ -53,8 +53,11 @@ export default function NotFound() {
                         </div>
                         <div className="flex justify-center items-center">
                             <Link href="/">
-                                <Button size="lg" className="w-full sm:w-auto bg-green-500 hover:bg-green-600">
-                                    <Home className="h-4 w-4 mr-1" /> Volver al inicio
+                                <Button
+                                    size="lg"
+                                    className="w-full sm:w-auto bg-green-500 hover:bg-green-600"
+                                >
+                                    <Home className="mr-1" /> Volver al inicio
                                 </Button>
                             </Link>
                         </div>

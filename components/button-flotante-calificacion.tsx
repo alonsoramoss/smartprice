@@ -16,11 +16,11 @@ export function ButtonFlotanteCalificacion() {
                 </div>
 
                 <Button
+                    size="icon"
                     onClick={() => setMostarCalificacionModal(true)}
                     className="h-14 w-14 rounded-full shadow-lg bg-gradient-to-r from-yellow-500 to-orange-500 flex-shrink-0"
-                    size="icon"
                 >
-                    <Star className="h-6 w-6 text-white" />
+                    <Star />
                 </Button>
 
                 <CalificacionModal open={mostarCalificacionModal} onOpenChange={setMostarCalificacionModal} />

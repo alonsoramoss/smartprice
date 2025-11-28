@@ -7,8 +7,8 @@ import { Card, CardHeader, CardTitle, CardDescription, CardContent } from "@/com
 import { Label } from "@/components/ui/label"
 import { Input } from "@/components/ui/input"
 import { Button } from "@/components/ui/button"
-import { Alert, AlertDescription } from "@/components/ui/alert"
 import { EyeOff, Eye } from "lucide-react"
+import { Alert, AlertDescription } from "@/components/ui/alert"
 
 export default function LoginPage() {
   const [email, setEmail] = useState("")
@@ -77,18 +77,17 @@ export default function LoginPage() {
                     className="text-sm sm:text-base pr-10"
                   />
                   <Button
-                    type="button"
-                    onClick={() => setMostrarPassword(!mostrarPassword)}
                     variant="ghost"
                     size="sm"
-                    title={mostrarPassword ? "Ocultar contraseña" : "Mostrar contraseña"}
+                    onClick={() => setMostrarPassword(!mostrarPassword)}
                     aria-label={mostrarPassword ? "Ocultar contraseña" : "Mostrar contraseña"}
+                    title={mostrarPassword ? "Ocultar contraseña" : "Mostrar contraseña"}
                     className="absolute right-0 top-0 h-full px-3 py-2 group hover:bg-transparent"
                   >
                     {mostrarPassword ? (
-                      <EyeOff className="h-4 w-4 text-gray-400 group-hover:text-gray-600 transition-colors duration-300 ease-in-out" />
+                      <EyeOff className="text-gray-400 group-hover:text-gray-600 transition-colors duration-300 ease-in-out" />
                     ) : (
-                      <Eye className="h-4 w-4 text-gray-400 group-hover:text-gray-600 transition-colors duration-300 ease-in-out" />
+                      <Eye className="text-gray-400 group-hover:text-gray-600 transition-colors duration-300 ease-in-out" />
                     )}
                   </Button>
                 </div>
