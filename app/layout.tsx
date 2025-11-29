@@ -70,7 +70,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="es">
-      <body className={poppins.className}>
+      <body className={`${poppins.className} overflow-x-hidden`}>
         <AuthProvider>
           <CartProvider>
             <div className="flex flex-col min-h-screen">
